@@ -4,7 +4,7 @@
 
 int main() {
 
-    initscr();            // Start ncurses mode
+    initscr(); // Start ncurses mode
 
     // Define window dimensions
     int height = 20, width = 50, start_y = 0, start_x = 0;
@@ -16,7 +16,7 @@ int main() {
     box(win, 0, 0);
     wrefresh(win);
 
-    while ((ch = getch()) != 'q') { 
+    while ((ch = getch()) != 'q') {  // quit if q is pressed
         werase(win);
         mvwprintw(win, 1, 1, "Key pressed: %c", ch);
         box(win, 0, 0);
@@ -25,6 +25,6 @@ int main() {
     }
 
     delwin(win);
-    endwin();
+    endwin(); // end of ncurse
     return 0;
 }
